@@ -21,7 +21,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="padding-container m-auto xl:mx-20 py-6">
+        <header className="padding-container m-auto py-6">
             {isMenuOpen && (
                 <div
                     className="z-10 fixed inset-0 bg-black opacity-80"
