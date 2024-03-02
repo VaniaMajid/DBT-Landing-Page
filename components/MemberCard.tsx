@@ -14,7 +14,7 @@ type MembershipProps = {
 
 const MemberCard = ({ icon, title, subTitle, price, duration, tick, points }: MembershipProps) => {
     return (
-        <div className='border bg-white shadow-sm max-w-[350px] max-h-[500px] border-none rounded-2xl'>
+        <div className='border bg-white shadow-sm max-w-[350px] max-h-[800px] border-none rounded-2xl'>
             <div className='space-y-1.5 p-6 flex text-black flex-row justify-between'>
                 <div className='text-2xl font-semibold leading-none tracking-tight'>
                     <h1 className='text-2xl font-bold'>{title}</h1>

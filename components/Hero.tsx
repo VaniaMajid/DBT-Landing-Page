@@ -4,8 +4,8 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section id="/" className="overflow-hidden lg:px-5">
-      <div className="hero-bg h-screen sm:h-[80vh] max-h-[800px] lg:h-[100vh]">
-        <div className="padding-container flex w-full h-[65vh] items-start">
+      <div className="hero-bg xs:h-[80vh] max-h-[800px] lg:h-max xl:h-screen">
+        <div className="padding-container flex w-full items-start pt-5 pb-20">
           <div className="flex w-full items-start ">
             <div className="lg:w-1/2 space-y-6">
               <div className="flex items-center gap-2">
@@ -16,7 +16,7 @@ const Hero = () => {
               </div>
 
               <div className="relative">
-                <h1 className="text-[40px] sm:text-[54px] leading-snug font-bold text-text-10 text-start">
+                <h1 className="text-[40px] sm:text-[50px] xl:text-[54px] leading-snug font-bold text-text-10 text-start">
                   Empower Your Financial Future with Disrupt the Basic
                 </h1>
                 <div className="absolute top-14 sm:top-20">

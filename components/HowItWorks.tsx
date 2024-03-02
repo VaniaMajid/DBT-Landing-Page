@@ -47,24 +47,25 @@ const HowItWorks = () => {
   };
 
   return (
-    <section id="how-it-works" className="overflow-hidden">
-      <div className="howitworks-bg flex items-center justify-center relative bg-primary-60 bg-opacity-20">
+    <section id="how-it-works">
+      <div className="howitworks-bg flex items-center justify-center relative bg-primary-60 bg-opacity-20 lg:h-max">
         <div className="padding-container flex flex-col w-full h-full pb-16">
-          <div className="xs:mx-7 s:mx-0 md:mx-0 lg:mx-0 flex flex-col justify-center gap-4 h-full">
-            <h1 className="text-[45px] font-bold w-fit text-text-10 relative">
+        <div className="mx-7 flex flex-col h-full justify-center gap-4 lg:my-10">
+            <h1 className="text-[45px] font-bold w-fit text-text-10 relative mt-5 ">
               How it
               <span> works</span>
               <div className="absolute -top-1 right-14">
                 <Image src="/ellipse.svg" alt="ellipse" width={46} height={24} />
               </div>
             </h1>
-            <p className="text-gray-50 text-base w-full max-w-[430px]">
+            <p className="text-gray-50 text-base w-full max-w-[430px] xs:mb-2">
               Businesses generally promote their brand, products, and services by identifying audience.
             </p>
           </div>
           <div className="flex w-full">
-            <div className="relative w-full overflow-hidden">
-              <div className="flex" style={{ transition: "transform 0.5s ease", transform: `translateX(-${currentIndex * (100 / cardsPerSlide)}%)` }}>
+            <div className="relative w-full">
+              <div className="overflow-hidden">
+              <div className="flex -ml-4" style={{ transition: "transform 0.5s ease", transform: `translateX(-${currentIndex * (100 / cardsPerSlide)}%)` }}>
                 {HOWITWORKS.map((work, index) => (
                   <div key={work.title} style={{ flex: `0 0 ${100 / cardsPerSlide}%` }}>
                     <HowItWorksCard
@@ -75,15 +76,17 @@ const HowItWorks = () => {
                   </div>
                 ))}
               </div>
+              </div>
+              
               <button
-                className="btn_carousel -left-6 sm:left-0 xs:left-2"
+                className="btn_carousel left-0.5"
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
               >
                 <Image src="/arrow-back.svg" alt="back" width={16} height={16} />
               </button>
               <button
-                className="btn_carousel -right-6 sm:right-0 xs:right-2"
+                className="btn_carousel right-0.5"
                 onClick={handleNext}
                 disabled={currentIndex >= HOWITWORKS.length - cardsPerSlide}
               >
